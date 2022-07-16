@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view ="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Eje2_2.MainPage">
+    <StackLayout>
+        <!--Image Grid.ColumnSpan="2"  BackgroundColor="Black" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,20,0,0" / -->
+        <view:SignaturePadView x:Name="firmaView" StrokeColor="Black" StrokeWidth="2" Margin="0,50,0,0" HeightRequest="250"/>
+        <Label Text="Nombre" Grid.Row="1" Margin="0,50,0,20" FontSize="20" FontAttributes="Bold"/>
+        <Entry Grid.Row="1" Placeholder="Ingrese el nombre de la firma" WidthRequest="100" x:Name="txtNombre"/>
+        <Label Text="Descripción" Grid.Row="1" Margin="0,10,0,10" FontSize="20" FontAttributes="Bold"/>
+        <Entry Grid.Row="1" Placeholder="Ingrese una descripción" WidthRequest="100" x:Name="txtDesc"/>
+
+
+        <Grid Padding="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnLista"  Text="ListaFirmas" CornerRadius="10" FontAttributes="Italic" BackgroundColor="Aqua" Clicked="btnLista_Clicked"/>
+            <Button Grid.Column="1" Text="Salvar" x:Name="btnSave" CornerRadius="10" FontAttributes="Italic" BackgroundColor="Aqua" Clicked="btnSave_Clicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
